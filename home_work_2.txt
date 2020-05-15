@@ -1,0 +1,38 @@
+# вход на сервер 
+ubuntu@ip-172-31-43-67:~$ ssh -i aws_demo.pem ubuntu@18.219.255.7
+
+# создание директорий
+ubuntu@ip-172-31-43-67:~$ mkdir first second
+ubuntu@ip-172-31-43-67:~$ ls
+first  second
+
+# создание файла first
+ubuntu@ip-172-31-43-67:~$ echo 'print(1)' > first/first.py
+ubuntu@ip-172-31-43-67:~$ ls first
+first.py
+
+# создание файла second
+ubuntu@ip-172-31-43-67:~$ echo 'print(2)' > second/second.py
+ubuntu@ip-172-31-43-67:~$ ls second
+second.py
+
+# перемещение файла second в папку first
+ubuntu@ip-172-31-43-67:~$ mv second/second.py first
+ubuntu@ip-172-31-43-67:~$ ls first
+first.py  second.py
+
+# удаление папки second
+ubuntu@ip-172-31-43-67:~$ rm -r second
+ubuntu@ip-172-31-43-67:~$ ls
+first
+
+# переименовывание папки first
+ubuntu@ip-172-31-43-67:~$ mv first first_second
+ubuntu@ip-172-31-43-67:~$ ls
+first_second
+
+# удаление папки first_second со всем содержимым
+ubuntu@ip-172-31-43-67:~$ rm -r first_second/
+ubuntu@ip-172-31-43-67:~$ ls
+ubuntu@ip-172-31-43-67:~$ 
+
