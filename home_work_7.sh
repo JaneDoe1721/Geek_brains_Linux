@@ -8,7 +8,7 @@ config.py  lesson7  matrix.py  number1.py  test.py  text.py
 
 # вывод файлов с расширение .py в текущей директории
 # (текущую директорию можно указать просто как '.' )
-ubuntu@ip-172-31-26-211:~$ ls ./ | grep '.py'
+ubuntu@ip-172-31-26-211:~$ ls '.' | grep '.py'
 config.py
 matrix.py
 number1.py
@@ -17,7 +17,7 @@ text.py
 
 # вывод файлов с расширение .py в текущей директории, название которых начинается на букву t
 # (текущую директорию можно указать просто как '.' )
-ubuntu@ip-172-31-26-211:~$ ls ./ | grep '^t.*.py$'
+ubuntu@ip-172-31-26-211:~$ ls '.' | grep '^t.*.py$'
 test.py
 text.py
 
@@ -36,7 +36,7 @@ print(1234)
 
 
 # вывод названия файлов и команду которую мы искали 
-ubuntu@ip-172-31-26-211:~$ ls . | grep print *.py 
+ubuntu@ip-172-31-26-211:~$ ls ~ | grep print *.py 
 matrix.py:print(a + c + b)
 number1.py:print(random.randint(1, 20))
 text.py:print('My name Hawk')
